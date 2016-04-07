@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Pixi.js basic example</title>
+ 
+ 
+ 
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+        }
+    </style>
+ 
+ 
+ 
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/3.0.7/pixi.min.js"></script>
+    <script>
+
+
+var renderer = PIXI.autoDetectRenderer(800, 600);
+document.body.appendChild(renderer.view);
+
+// create the root of the scene graph
+var stage = new PIXI.Container();
+
+PIXI.loader
+    .add('spritesheet.json')
+    .load(onAssetsLoaded);
+
+var movie;
+
+function onAssetsLoaded()
+{
+    // create an array of textures from an image path
+    var frames = [];
+
+    for (var i = 0; i < 3; i++) {
+        var val = i < 10 ? '0' + i : i;
+
+        // magically works since the spritesheet was loaded with the pixi loader
+        frames.push(PIXI.Texture.fromFrame('move' + val + '.png'));
+    }
+
+
+    // create a MovieClip (brings back memories from the days of Flash, right ?)
+    movie = new PIXI.extras.MovieClip(frames);
+
+    /*
+     * A MovieClip inherits all the properties of a PIXI sprite
+     * so you can change its position, its anchor, mask it, etc
+     */
+    movie.position.set(0);
+
+    movie.anchor.set(0.5);
+    movie.animationSpeed = 0.01;
+
+    movie.play();
+
+    stage.addChild(movie);
+
+    animate();
+}
+
+function animate() {
+    // movie.rotation += 0.01;
+
+    // render the stage container
+    renderer.render(stage);
+
+    requestAnimationFrame(animate);
+}
+
+
+
+
+
+    </script>
+<!--     <script>
+        // Autodetect and create the renderer
+        var renderer = PIXI.autoDetectRenderer(160, 144);
+         
+        // Set the background color of the renderer to a baby-blue'ish color
+        renderer.backgroundColor = 0x3498db;
+         
+        // Append the renderer to the body of the page
+        document.body.appendChild(renderer.view);
+         
+        // Create the main stage for your display objects
+        var stage = new PIXI.Container();
+
+        // Add our image as a sprite
+        var goose = new PIXI.Sprite.fromImage('basilisk.jpg');
+         
+        // Set the anchor in the center of our sprite 
+        goose.anchor.x = 0.5;
+        goose.anchor.y = 0.5;
+         
+        // Position our goose in the center of the renderer
+        goose.position.x = renderer.width / 2;
+        goose.position.y = renderer.height / 2;
+         
+        // Add the goose to the stage
+        stage.addChild(goose);
+
+         
+        // Start animating
+        animate();
+         
+        function animate() {
+            requestAnimationFrame(animate);
+            // Rotate our goose clockwise
+            // goose.rotation += 0.1;   
+         
+            // Rotate our goose counter-clockwise
+            // goose.rotation -= 0.1;   
+            // Render our container
+            renderer.render(stage);
+        }
+    </script> -->
+</body>
+</html>

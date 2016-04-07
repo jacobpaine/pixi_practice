@@ -1,0 +1,41 @@
+{
+	"meta": {
+		"image": "spritesheet.png",
+		"size": {"w":1024,"h":512},
+		"scale": "1"
+	},
+	"frames": {
+		"move00.png":
+		{
+		    "frame": {"x":-100,"y":-150,"w":210,"h":240},
+		    "rotated": false,
+		    "trimmed": true,
+		    "spriteSourceSize": {"x":1,"y":2,"w":360,"h":226},
+		    "sourceSize": {"w":0,"h":240}
+		},
+		"move01.png":
+		{
+		    "frame": {"x":-100,"y":-150,"w":210,"h":240},
+		    "rotated": false,
+		    "trimmed": true,
+		    "spriteSourceSize": {"x":1,"y":2,"w":0,"h":226},
+		    "sourceSize": {"w":0,"h":240}
+		},
+		"move02.png":
+		{
+		    "frame": {"x":14,"y":-150,"w":210,"h":240},
+		    "rotated": false,
+		    "trimmed": true,
+		    "spriteSourceSize": {"x":1,"y":2,"w":0,"h":226},
+		    "sourceSize": {"w":0,"h":240}
+		},
+		"move03.png":
+		{
+		    "frame": {"x":14,"y":-150,"w":210,"h":240},
+		    "rotated": false,
+		    "trimmed": true,
+		    "spriteSourceSize": {"x":1,"y":2,"w":0,"h":226},
+		    "sourceSize": {"w":0,"h":240}
+		}
+	}
+}
