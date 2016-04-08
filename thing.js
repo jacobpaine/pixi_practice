@@ -33,7 +33,7 @@ function onAssetsLoaded()
     movie.position.set(300);
 
     movie.anchor.set(0.5);
-    movie.animationSpeed = 0.5;
+    movie.animationSpeed = 0.3;
 
     movie.play();
 

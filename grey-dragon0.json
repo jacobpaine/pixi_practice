@@ -1,0 +1,20 @@
+{"frames": {
+
+"grey-dragon.png":
+{
+	"frame": {"x":0,"y":0,"w":3248,"h":88},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":3248,"h":88},
+	"sourceSize": {"w":3248,"h":88}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "grey-dragon0.png",
+	"format": "RGBA8888",
+	"size": {"w":4096,"h":128},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:496ac4e016dfe95447b119a117212d4e:29c5c0dbba025a61cc5aed087d14ea63:88f6fbb6dd5e55de232ecb49355ba405$"
+}
+}

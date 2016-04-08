@@ -8,7 +8,7 @@
  
     <style>
         body {
-            margin: 0;
+            margin: 100;
             padding: 0;
             background-color: #000;
         }
@@ -22,7 +22,7 @@
     <script>
 
 
-var renderer = PIXI.autoDetectRenderer(800, 600);
+var renderer = PIXI.autoDetectRenderer(224, 176);
 document.body.appendChild(renderer.view);
 
 // create the root of the scene graph
@@ -39,7 +39,7 @@ function onAssetsLoaded()
     // create an array of textures from an image path
     var frames = [];
 
-    for (var i = 0; i < 3; i++) {
+    for (var i = 0; i < 29; i++) {
         var val = i < 10 ? '0' + i : i;
 
         // magically works since the spritesheet was loaded with the pixi loader
@@ -56,8 +56,8 @@ function onAssetsLoaded()
      */
     movie.position.set(0);
 
-    movie.anchor.set(0.5);
-    movie.animationSpeed = 0.01;
+    movie.anchor.set(0);
+    movie.animationSpeed = 0.3;
 
     movie.play();
 
